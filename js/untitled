@@ -1,0 +1,102 @@
+
+// WHY WOULD THIS NOT WORK?
+
+// addPotion(newPotion) {
+//     console.log(newPotion)
+//     // console.log(this.keys[potion])
+//     // console.log(this[keys])
+//     const potionArray = this.potions;
+//     for (i = 0; i < potionArray.length; i++) {
+//         if (newPotion.name.includes(potionArray[i].name) === false) {
+//             console.log(newPotion.name.includes(potionArray[i].name)); {
+//                 potionArray.push(newPotion);
+//                 console.log(potionArray);
+//             }
+//         }
+//     };
+//     return `Error! Potion ${newPotion.name} is already in your inventory!`;
+// },
+
+//  THIS IS WHAT WORKED
+// addPotion(newPotion) {
+//     const potionArray = this.potions;
+//     let itemFound = false;
+//     for (i = 0; i < potionArray.length; i++) {
+//         if (potionArray[i].name === newPotion.name) {
+//             console.log(potionArray[i].name === newPotion.name);
+//             itemFound = true;
+//             console.log(itemFound);
+//             break;
+//         }
+//     }
+//     if (itemFound !== true) {
+//         console.log(potionArray);
+//         potionArray.push(newPotion);
+//     } else {
+
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//     }
+
+// },
+
+
+// ENTIRE CODE FOR AUTO CHECK 41 MODULE 3
+const atTheOldToad = {
+    potions: [
+        { name: "Speed potion", price: 460 },
+        { name: "Dragon breath", price: 780 },
+        { name: "Stone skin", price: 520 },
+    ],
+    // Change code below this line
+    getPotions() {
+        return this.potions;
+    },
+    getPotions() {
+        return this.potions;
+    },
+    addPotion(newPotion) {
+
+        const potionArray = this.potions;
+        let itemFound = false;
+        for (i = 0; i < potionArray.length; i++) {
+            if (potionArray[i].name === newPotion.name) {
+                console.log(potionArray[i].name === newPotion.name);
+                itemFound = true;
+                console.log(itemFound);
+                break;
+            }
+        }
+        if (itemFound !== true) {
+            console.log(potionArray);
+            potionArray.push(newPotion);
+        } else {
+            return `Error! Potion ${newPotion.name} is already in your inventory!`;
+        }
+    },
+    removePotion(potionName) {
+        const potionArray = this.potions;
+        let potionRemovedIndex = 0;
+        let potionRemoved = 0;
+
+        for (i = 0; i < potionArray.length; i++) {
+            // console.log(potionArray[i].name);
+            if (potionArray[i].name === potionName) {
+                potionRemovedIndex = potionArray.indexOf(potionArray[i]); {
+                }
+                return potionArray.splice(potionRemovedIndex, 1);
+            }
+        }
+    },
+    updatePotionName(oldName, newName) {
+        const potionArray = this.potions;
+
+        for (i = 0; i < potionArray.length; i++) {
+            // console.log(potionArray[i].name);
+            if (potionArray[i].name === oldName) {
+                console.log(potionArray[i].name === oldName)
+                return potionArray[i].name = newName;
+            }
+        }
+    },
+    // Change code above this line
+};
