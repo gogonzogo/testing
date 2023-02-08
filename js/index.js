@@ -5,9 +5,26 @@ function squareSum(numbers) {
         console.log(numberSquare + (number * number));
         return numberSquare + (number * number);
     }, 0);
+    console.log(squaredNumSum);
 };
-squareSum([0, 3, 4, 5]);
+squareSum([0]);
 
+<form action="javascript:void(0);">
+    <select>
+        <optgroup label="Developer">
+            <option value="frontend">Frontend</option> </optgroup>
+        <optgroup label="Base skills">
+            <option value="html" selected>HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option> </optgroup>
+        <optgroup label="Frameworks" disabled>
+            <option value="vue">Vue</option>
+            <option value="react">React GraphQL</option>
+            <option value="angular">Angular</option> </optgroup>
+    </select>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</form>
 
 
 
